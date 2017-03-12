@@ -1,0 +1,11 @@
+build
+dist
+
+.stack-work
+
+.hpc
+*.tix
+
+tags
+
+.lvimrc

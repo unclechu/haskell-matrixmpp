@@ -1,0 +1,12 @@
+resolver: lts-8.5
+
+packages:
+- '.'
+
+extra-deps:
+- pontarius-xmpp-0.5.4
+- stringprep-1.0.0 # required by pontarius-xmpp
+
+flags: {}
+
+extra-package-dbs: []

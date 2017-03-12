@@ -1,0 +1,43 @@
+name:                matrixmpp
+version:             0.1.0.0
+synopsis:            [Matrix] <> XMPP bridge
+description:         Bridge between Matrix and XMPP protocols.
+homepage:            https://github.com/unclechu/haskell-matrixmpp#readme
+license:             GPL-3
+license-file:        LICENSE
+author:              Viacheslav Lotsmanov
+maintainer:          lotsmanov89@gmail.com
+copyright:           2017 Viacheslav Lotsmanov
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+executable matrixmpp
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , matrixmpp
+                     , pontarius-xmpp
+  default-language:    Haskell2010
+
+test-suite matrixmpp-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , matrixmpp
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/unclechu/haskell-matrixmpp
