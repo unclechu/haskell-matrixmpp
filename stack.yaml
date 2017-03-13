@@ -4,8 +4,9 @@ packages:
 - '.'
 
 extra-deps:
+- qm-interpolated-string-0.1.0.0
 - pontarius-xmpp-0.5.4
-- stringprep-1.0.0 # required by pontarius-xmpp
+- stringprep-1.0.0 # required by `pontarius-xmpp`
 
 flags: {}
 
