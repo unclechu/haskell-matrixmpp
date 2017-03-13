@@ -1,11 +1,17 @@
 build
 dist
 
+# the haskell tool stack
 .stack-work
 
+# coverage files
 .hpc
 *.tix
 
+# ctags
 tags
 
+# local vim configs
 .lvimrc
+
+config.yaml

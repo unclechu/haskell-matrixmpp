@@ -1,8 +1,10 @@
-{-# LANGUAGE PackageImports #-}
-
 module Main (main) where
 
+import "matrixmpp" Operators
+
+-- import "yaml"
 import "pontarius-xmpp" Network.Xmpp
 
+
 main :: IO ()
-main = putStrLn "hello"
+main = "testing: " & (++ "hello") ∘> (++ " world") & putStrLn
